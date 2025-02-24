@@ -216,6 +216,6 @@ mode "resize" {
 # }
 
 
-exec /home/kiosk-user/autologin/venv/bin/python3 /home/kiosk-user/autologin/login_to_eventmap.py
+exec /home/kiosk-user/autologin/venv/bin/python3.11 /home/kiosk-user/autologin/login_to_eventmap.py
 
 include /etc/sway/config.d/*
