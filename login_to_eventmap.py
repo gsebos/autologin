@@ -12,9 +12,9 @@ gecko_diver_path = "/home/kiosk-user/autologin/geckodriver"
 url = "https://roomdisplay.is.ed.ac.uk/Display?rooms=2104,2105,1846,2106,2107,2108,2109,2021,1849&branding=ev&type=lobbyCalendar&reEntry=1&confAuth=pin&calendarType=bookin"
 
 options = Options()
-# options.headless = False  # Optional: If you want Firefox to run in headless mode (no UI)
-# Run Firefox in Kiosk mode
-options.add_argument("--kiosk") 
+#options.headless = False  # Optional: If you want Firefox to run in headless mode (no UI)
+# Run Firefox in Kiosk mode (not working in sway, getting black srceen)
+# options.add_argument("--kiosk") 
 service = Service(gecko_diver_path)  # Specify the path to geckodriver
 
 driver = webdriver.Firefox(service=service, options=options)
