@@ -33,6 +33,9 @@ mkdir -p $homedir/.config/sway
 
 cd $homedir
 
+echo "MOZ_DISABLE_RDD_SANDBOX=1" >> .bashrc
+echo "MOZ_ENABLE_WAYLAND=1" >> .bashrc
+
 echo "sway" >> .bash_login
 
 cd autologin
