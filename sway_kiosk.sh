@@ -40,6 +40,8 @@ echo "sway" >> .bash_login
 
 cd autologin
 
+chmod +x start-kiosk.sh
+
 tar xvfz geckodriver-v0.35.0-linux64.tar.gz
 
 
