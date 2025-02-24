@@ -33,6 +33,8 @@ mkdir -p $homedir/.config/sway
 
 cd $homedir
 
+echo "sway" >> .bash_login
+
 cd autologin
 
 tar xvfz geckodriver-v0.35.0-linux64.tar.gz
