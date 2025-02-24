@@ -21,7 +21,7 @@ fi
 
 homedir=/home/$myusername
 
-apt  install vim sudo sway xorg xwayland python3.11-venv firefox-esr
+apt  install vim sudo sway xorg xwayland python3.11-venv firefox-esr tmux lightdm
 
 # usermod -aG sudo $myusername
 
@@ -63,4 +63,21 @@ vim config
 
 chown -Rv 1000:1000 $homedir
 
-read -p "Press enter to configure the autologin python script"
+echo -e "\n\n"
+echo "Press enter to configure the autologin python script"
+read -p "You will need the username and password and the URL if it has changed"
+
+vim $homedir/autologin/login_to_eventmap.py
+
+echo -e "\n\n"
+read -p "enable autologin in lightdm"
+vim /etc/lightdm/lightdm.conf
+
+groupadd -r autologin
+gpasswd -a username autologin
+
+echo -e "\n\n"
+read -p "Now configure the URL home page for firefox and login to eventmap"
+firefox
+
+echo "setup completed"
