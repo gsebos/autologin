@@ -21,7 +21,7 @@ fi
 
 homedir=/home/$myusername
 
-apt vim install sudo sway xorg xwayland python3.11-venv
+apt  install vim sudo sway xorg xwayland python3.11-venv
 
 # usermod -aG sudo $myusername
 
