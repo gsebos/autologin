@@ -215,7 +215,6 @@ mode "resize" {
 #     }
 # }
 
-exec firefox
-exec /home/kiosk-user/autologin/venv/bin/python3.11 /home/kiosk-user/autologin/login_to_eventmap.py
+exec /home/kiosk-user/autologin/start-kiosk.sh
 
 include /etc/sway/config.d/*
