@@ -70,7 +70,7 @@ read -p "You will need the username and password and the URL if it has changed"
 vim $homedir/autologin/login_to_eventmap.py
 
 echo -e "\n\n"
-read -p "enable autologin in lightdm"
+read -p "enable autologin in lightdm uncomment under [Seat:*]"
 vim /etc/lightdm/lightdm.conf
 
 groupadd -r autologin
@@ -79,5 +79,7 @@ gpasswd -a username autologin
 echo -e "\n\n"
 read -p "Now configure the URL home page for firefox and login to eventmap"
 firefox
+
+echo "input * events disabled" >> $homedir/.config/sway/config
 
 echo "setup completed"
