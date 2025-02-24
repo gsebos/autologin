@@ -23,7 +23,7 @@ homedir=/home/$myusername
 
 apt vim install sudo sway xorg xwayland python3.11-venv
 
-usermod -aG sudo $myusername
+# usermod -aG sudo $myusername
 
 read -p "press enter to add sway to .profile"
 
