@@ -21,7 +21,7 @@ fi
 
 homedir=/home/$myusername
 
-apt  install vim sudo sway xorg xwayland python3.11-venv
+apt  install vim sudo sway xorg xwayland python3.11-venv firefox-esr
 
 # usermod -aG sudo $myusername
 
@@ -32,9 +32,12 @@ vim $homedir/.profile
 mkdir -p $homedir/.config/sway
 
 cd $homedir
-git clone https://github.com/gsebos/autologin.git
 
 cd autologin
+
+tar xvfz geckodriver-v0.35.0-linux64.tar.gz
+
+
 cp config $homedir/.config/sway
 
 python3 -m venv venv
@@ -47,9 +50,10 @@ deactivate
 cd $homedir/.config/sway
 
 echo -e "\n\n"
-echo "output id is $(swaymsg -t get_outputs)"
 read -p "press enter to configure display"
 vim config
 
 
 chown -Rv 1000:1000 $homedir
+
+read -p "Press enter to configure the autologin python script"
