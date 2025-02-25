@@ -74,7 +74,7 @@ read -p "enable autologin in lightdm uncomment under [Seat:*]"
 vim /etc/lightdm/lightdm.conf
 
 groupadd -r autologin
-gpasswd -a username autologin
+gpasswd -a $myusername autologin
 
 echo -e "\n\n"
 read -p "Now configure the URL home page for firefox and login to eventmap"
