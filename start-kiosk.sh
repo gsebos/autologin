@@ -2,7 +2,7 @@
 
 sleep 2
 
-firefox
+firefox &
 
 sleep 2
 
