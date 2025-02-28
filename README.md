@@ -144,6 +144,7 @@ If using vim, place the cursor on this line and type `dd` in normal mode (press 
 ## Sway shortcuts
 
 `window key` + `q` : Close the active window
+
 `window key` + `Enter`: opens a terminal
 
 
