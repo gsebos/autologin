@@ -25,10 +25,6 @@ apt  install vim sudo sway xorg xwayland python3.11-venv firefox-esr tmux lightd
 
 # usermod -aG sudo $myusername
 
-read -p "press enter to add sway to .profile"
-
-vim $homedir/.profile
-
 mkdir -p $homedir/.config/sway
 
 cd $homedir
