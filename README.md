@@ -127,7 +127,7 @@ export DISPLAY=:0
 ```
 
 #### If the cached credentials are lost
-if the kiosk resets back to a login screen, the python script at `/home/kiosk-user/login_to_eventmap.py` can be used. Ensure that the username and password variables have been updated. Alternatively, plug in peripherals to the PC and relogin in firefox directly, you'll need to re-enble inputs if you have disabled them (see below).
+if the kiosk resets back to a login screen, the python script at `/home/kiosk-user/login_to_eventmap.py` can be used. Ensure that the username and password variables have been updated. Alternatively, plug in peripherals to the PC and relogin in firefox directly, you'll need to re-enable inputs if you have disabled them (see below).
 
 
 ### disabling all inputs
