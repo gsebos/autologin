@@ -141,7 +141,10 @@ WARNING: the PC will then only be controllable from a remote SSH session or by s
 
 If using vim, place the cursor on this line and type `dd` in normal mode (press `esc` before to ensure that you are in normal mode). Then save and quit (`esc` then type `:wq`)
 
+## Sway shortcuts
 
+`window key` + `q` : Close the active window
+`window key` + `Enter`: opens a terminal
 
 
 ## TODO
