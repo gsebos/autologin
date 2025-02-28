@@ -23,7 +23,7 @@ apt update && apt upgrade
 ```
 2. Install git
 ```
-apt install 
+apt install git
 ```
 3. cd to the kiosk-user home
 ```
