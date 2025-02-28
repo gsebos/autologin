@@ -149,8 +149,8 @@ If using vim, place the cursor on this line and type `dd` in normal mode (press 
 
 
 ## TODO
-add script `login_to_eventmap.sh` with full environment path to run the python script using the virtual environment.
-include lightdm config file and install it during the `sway_kiosk.sh` script
+- add script `login_to_eventmap.sh` with full environment path to run the python script using the virtual environment.
+- include lightdm config file and install it during the `sway_kiosk.sh` script
 
 
 
