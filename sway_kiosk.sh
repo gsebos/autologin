@@ -25,10 +25,6 @@ apt  install vim sudo sway xorg xwayland python3.11-venv python3-tk python3-dev 
 
 # usermod -aG sudo $myusername
 
-read -p "press enter to add sway to .profile"
-
-vim $homedir/.profile
-
 mkdir -p $homedir/.config/sway
 
 cd $homedir
@@ -75,12 +71,8 @@ read -p "enable autologin in lightdm uncomment under [Seat:*]"
 vim /etc/lightdm/lightdm.conf
 
 groupadd -r autologin
-gpasswd -a username autologin
+gpasswd -a $myusername autologin
 
-echo -e "\n\n"
-read -p "Now configure the URL home page for firefox and login to eventmap"
-firefox
-
-echo "input * events disabled" >> $homedir/.config/sway/config
+# echo "input * events disabled" >> $homedir/.config/sway/config
 
 echo "setup completed"
