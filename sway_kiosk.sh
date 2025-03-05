@@ -21,7 +21,7 @@ fi
 
 homedir=/home/$myusername
 
-apt  install vim sudo sway xorg xwayland python3.11-venv firefox-esr tmux lightdm
+apt  install vim sudo sway xorg xwayland python3.11-venv python3-tk python3-dev firefox-esr tmux lightdm
 
 # usermod -aG sudo $myusername
 
@@ -51,6 +51,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 pip install selenium
+pip install pyautogui
 
 deactivate
 

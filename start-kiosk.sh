@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-sleep 2
-
-firefox
+killall firefox-esr
 
 sleep 2
 
-firefox --kiosk
+export DISPLAY=:0
+
+/home/kiosk-user/autologin/venv/bin/python3.11 /home/kiosk-user/autologin/login_to_eventmap.py

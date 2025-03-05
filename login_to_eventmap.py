@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
+import pyautogui
 import time
 
 username = ""
@@ -18,18 +19,17 @@ options = Options()
 service = Service(gecko_diver_path)  # Specify the path to geckodriver
 
 driver = webdriver.Firefox(service=service, options=options)
-driver.maximize_window()
 
 driver.get(url)
-
 
 input_field = driver.find_element(By.ID, "email-input")
 
 input_field.send_keys(username)
 input_field.send_keys(Keys.RETURN)
 
-
 time.sleep(10)
+
+pyautogui.press("f11")
 
 input_field_MS_email = driver.find_element(By.TAG_NAME, "input") 
 input_field_MS_email.send_keys(username)
