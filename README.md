@@ -119,16 +119,14 @@ Reboot once more, this time this should go straight to the firefox kiosk and to 
 
 ### start-kiosk.sh
 
-This can be run remotely in case the network drops or for whatever reason firefox needs to be restarted. You need to export the `DISPLAY` environment variable in order to launch firefox (or the `start-kiosk.sh` script) remotely from an SSH session:
+This can be run remotely in case the network drops or for whatever reason firefox needs to be restarted:
 In an SSH session, run
 ```
-export DISPLAY=:0
 /home/kiosk-user/autologin/start-kiosk.sh
 ```
 
 #### If the cached credentials are lost
-if the kiosk resets back to a login screen, the python script at `/home/kiosk-user/login_to_eventmap.py` can be used. Ensure that the username and password variables have been updated. Alternatively, plug in peripherals to the PC and relogin in firefox directly, you'll need to re-enable inputs if you have disabled them (see below).
-
+if the kiosk resets back to a login screen, re-run start-kiosk.sh, this will kill all instances of firefox and run the the auto login python script.
 
 ### disabling all inputs
 Sway can be configured to disable all inputs so that keyboard and mouse plugged into the kiosk PC will not work at all (preventing tempering with the PC). This is achieved by running the following command:
@@ -149,7 +147,6 @@ If using vim, place the cursor on this line and type `dd` in normal mode (press 
 
 
 ## TODO
-- add script `login_to_eventmap.sh` with full environment path to run the python script using the virtual environment.
 - include lightdm config file and install it during the `sway_kiosk.sh` script
 
 
