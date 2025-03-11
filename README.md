@@ -52,7 +52,7 @@ This script installs [sway](https://swaywm.org/) (a window manager and wayland c
 
 On running the script, this will prompt you for the username. Enter kiosk-user (if you are following this to the letter, otherwise if you have name your user differently during the OS install, use that)
 
-The script will stop at several steps to allow editing of necessary configuration files. This uses vim, press `i` to enter insert mode, this lets you edit the document. When done, press `esc` then `:wq` to save and quit. On quitting, the script will continue running.
+The script will stop at several steps to allow editing of necessary configuration files. This uses vim, when the screen changes to show the file content, press `i` to enter insert mode, this lets you edit the document. When done, press `esc` then `:wq` to save and quit. On quitting, the script will continue running.
 
 The following configuration will come up during the script
 1. Display configuration
