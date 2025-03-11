@@ -83,6 +83,8 @@ username = ""   <---- add username between the quotes
 password = ""  <----- add password between the quotes
  
 gecko_diver_path = "/home/kiosk-user/autologin/geckodriver"
+
+# replace this with your URL: 
 url = "https://roomdisplay.is.ed.ac.uk/Display?rooms=2104,2105,1846,2106,2107,2108,2109,2021,1849&branding=ev&type=lobbyCalendar&reEntry=1&confAuth=pin&calendarType=bookin"
 ```
 
