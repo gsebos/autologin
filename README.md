@@ -147,6 +147,26 @@ If using vim, place the cursor on this line and type `dd` in normal mode (press 
 
 `window key` + `Enter`: opens a terminal
 
+## Troubleshooting
+
+If the kiosk is not displaying correctly, you will need to connect to the machine remotely via ssh as `kiosk-user`.
+
+Once connected, cd to the autologin folder
+```
+cd autologin
+```
+then run the `start-kiosk.sh` script. This will kill the current firefox process and will then run the `login_to_eventmap.py` (the automated login script):
+```
+./start-kiosk.sh
+```
+After a couple of minutes the kiosk should be back to the application screen.
+
+If further intervention and/or troubleshooting is required you may need to work on the PC directly. To do this, you will first need to re-enable inputs (keyboard and mouse).
+Edit `~/kiosk-user/.config/sway/config` using vim or another text editor like nano and remove the line below (at the very bottom of the document)
+```
+input * events disabled
+```
+Reboot the PC and you can then use a keyboard and mouse. Check the sway keyboard shortcut above as you will need those to open up a terminal in sway. Alternatively, open a TTY by pressing `ctrl`+`alt`+`f2` or `ctrl`+`alt`+`f3`, login and work from the TTY (but you won't be able to launch firefox or other GUI applications from there)
 
 ## TODO
 - Document cron task and what to do in case of logout/error
