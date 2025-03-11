@@ -11,7 +11,7 @@ Install Debian in expert mode so that all options are availble during installati
 - choose home in the same partition as the root partition for simplicity
 - Create a user called `kiosk-user`
 - Make sure to **enable auto update for security updates**
-- In the software section make sure to **untick any desktop envorionment and only pick SSH server** so that you get a minimal server installation
+- In the software section make sure to **untick any desktop environment and only pick SSH server** so that you get a minimal server installation
 
 ### First steps and cloning the repository
 
