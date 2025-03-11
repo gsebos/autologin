@@ -75,7 +75,7 @@ Enter insert mode (`i`)
 then save and quit hit `esc` then type `:wq`
 
 2. Python Script
-You are then prompted to configure a python script. This is not required for anything else than this specific example for which it is optional. This can be used as a template for other python scripts. It automates logging into the web application which can be helpful if the web cached and cookies get reset, then the script can be run remotely via SSH. If using the script, you will neeed the username and password of the user to log in to EventMap Booker Display App as well as updating the `url` variable to your URL.
+You are then prompted to configure a python script. This is not required for anything else than this specific example. This can be used as a template for other python scripts. It automates logging into the web application and is used by the `start-kiosk.sh` script. You will neeed the username and password of the user to log in to EventMap Booker Display App as well as updating the `url` variable to your URL.
 Enter insert mode (`i`)
 Edit these lines:
 ```
@@ -168,9 +168,17 @@ input * events disabled
 ```
 Reboot the PC and you can then use a keyboard and mouse. Check the sway keyboard shortcut above as you will need those to open up a terminal in sway. Alternatively, open a TTY by pressing `ctrl`+`alt`+`f2` or `ctrl`+`alt`+`f3`, login and work from the TTY (but you won't be able to launch firefox or other GUI applications from there)
 
-## CRON
+## Finishing touch: CRON
 
-A recuring cron task runs the `start-kiosk.sh` script every day at 7 am. A log file can be found at `~/cron.log`, this only saves a timestamp when the cron job is run and allows to check that the cron job has worked.
+A cron task to run the `start-kiosk.sh` script every day at 7 am (or other suitable time) should be set up to relogin to the app (which seems to auto log out overnight). To do so run
+```
+crontab -e 
+```
+and in the file that opens add at the very end add:
+```
+0 7 * * * /home/kiosk-user/autologin/start-kiosk.sh >> /home/kiosk-user/cron.log
+
+```
 
 ## TODO
 - Document cron task and what to do in case of logout/error
