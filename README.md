@@ -149,6 +149,7 @@ If using vim, place the cursor on this line and type `dd` in normal mode (press 
 
 
 ## TODO
+- Document cron task and what to do in case of logout/error
 - include lightdm config file and install it during the `sway_kiosk.sh` script
 
 
