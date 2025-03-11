@@ -10,6 +10,7 @@ import time
 username = ""
 password = ""
 gecko_diver_path = "/home/kiosk-user/autologin/geckodriver"
+# Generate a URL in eventmap roomdisplay and update the url variable below
 url = "https://roomdisplay.is.ed.ac.uk/Display?rooms=2104,2105,1846,2106,2107,2108,2109,2021,1849&branding=ev&type=lobbyCalendar&reEntry=0&calendarType=booking"
 
 options = Options()
