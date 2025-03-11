@@ -75,7 +75,7 @@ Enter insert mode (`i`)
 then save and quit hit `esc` then type `:wq`
 
 2. Python Script
-You are then prompted to configure a python script. This is not required for anything else than this specific example for which it is optional. This can be used as a template for other python scripts. It automates logging into the web application which can be helpful if the web cached and cookies get reset, then the script can be run remotely via SSH. If using the script, you will neeed the username and password of the user to log in to EventMap Booker Display App.
+You are then prompted to configure a python script. This is not required for anything else than this specific example for which it is optional. This can be used as a template for other python scripts. It automates logging into the web application which can be helpful if the web cached and cookies get reset, then the script can be run remotely via SSH. If using the script, you will neeed the username and password of the user to log in to EventMap Booker Display App as well as updating the `url` variable to your URL.
 Enter insert mode (`i`)
 Edit these lines:
 ```
