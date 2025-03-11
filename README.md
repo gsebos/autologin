@@ -168,6 +168,10 @@ input * events disabled
 ```
 Reboot the PC and you can then use a keyboard and mouse. Check the sway keyboard shortcut above as you will need those to open up a terminal in sway. Alternatively, open a TTY by pressing `ctrl`+`alt`+`f2` or `ctrl`+`alt`+`f3`, login and work from the TTY (but you won't be able to launch firefox or other GUI applications from there)
 
+## CRON
+
+A recuring cron task runs the `start-kiosk.sh` script every day at 7 am. A log file can be found at `~/cron.log`, this only saves a timestamp when the cron job is run and allows to check that the cron job has worked.
+
 ## TODO
 - Document cron task and what to do in case of logout/error
 - include lightdm config file and install it during the `sway_kiosk.sh` script
