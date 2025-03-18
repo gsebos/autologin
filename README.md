@@ -105,7 +105,9 @@ then save and quit hit `esc` then type `:wq`
 If all went well, you should see the message "set up completed" and no error codes.
 
 
-### Finishing touch: CRON
+### Finishing touches 
+
+#### set up CRON
 
 A cron task to run the `start-kiosk.sh` script every day at 7 am (or other suitable time) should be set up to relogin to the app (which seems to auto log out overnight). To do so run
 ```
@@ -116,6 +118,38 @@ and in the file that opens add at the very end add:
 0 7 * * * /home/kiosk-user/autologin/start-kiosk.sh >> /home/kiosk-user/cron.log
 
 ```
+
+#### Getting the correct resolution (optional)
+
+If the resolution does not look right, it needs to be configured. This needs to be done on initial set up while working directly on the machine (i.e. not via SSH).
+
+Find the correct display output name:
+```
+swaymsg -t get_outputs
+```
+
+Open the sway configuration file in vim (or your preferred text editor):
+
+```
+vim /home/kiosk-user/.config/sway/config
+```
+
+then edit as indicated below, adding the correct display output name resulting from the above command:
+
+```
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+#output * bg /home/seb/Pictures/Wallpapers/debian-linux-mountains.jpg fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0       <------------ edit this line, remove the leading # to uncomment and change HDMI-A-1 to your display output name, optionally adjust the resolution
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+```
+
 
 ## Set up summary and further notes
 
@@ -133,7 +167,7 @@ In an SSH session, run
 ```
 
 #### If the cached credentials are lost
-if the kiosk resets back to a login screen, re-run start-kiosk.sh, this will kill all instances of firefox and run the the auto login python script.
+if the kiosk resets back to a login screen, re-run `./start-kiosk.sh`, this will kill all instances of firefox and run the the auto login python script.
 
 ### disabling all inputs
 Sway can be configured to disable all inputs so that keyboard and mouse plugged into the kiosk PC will not work at all (preventing tempering with the PC). This is achieved by running the following command:
