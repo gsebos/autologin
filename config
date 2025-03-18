@@ -24,9 +24,6 @@ include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /home/seb/Pictures/Wallpapers/debian-linux-mountains.jpg fill
-#
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
