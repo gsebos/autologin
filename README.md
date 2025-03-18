@@ -172,7 +172,7 @@ Sway can be configured to disable all inputs so that keyboard and mouse plugged 
 echo "input * events disabled" >> /home/kiosk-user/.config/sway/config
 ```
 
-WARNING: the PC will then only be controllable from a remote SSH session or by starting it in rescue mode. Inputs can be activated again by editing the  `/home/kiosk-user/.config/sway/config` config file and removing this line:
+WARNING: after rebooting or reloading the sway configuration, the PC will only be controllable from a remote SSH session or by starting it in rescue mode. Inputs can be activated again by editing the  `/home/kiosk-user/.config/sway/config` config file and removing this line:
 `input * events disabled`
 
 If using vim, place the cursor on this line and type `dd` in normal mode (press `esc` before to ensure that you are in normal mode). Then save and quit (`esc` then type `:wq`)
@@ -182,6 +182,8 @@ If using vim, place the cursor on this line and type `dd` in normal mode (press 
 `window key` + `q` : Close the active window
 
 `window key` + `Enter`: opens a terminal
+
+`window key` + `shift` + `c`: reload sway configuration, needed to apply any changes made to `/home/kiosk-user/.config/sway/config` 
 
 ## Troubleshooting
 
