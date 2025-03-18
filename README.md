@@ -139,9 +139,6 @@ then edit as indicated below, adding the correct display output name resulting f
 ```
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /home/seb/Pictures/Wallpapers/debian-linux-mountains.jpg fill
-#
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0       <------------ edit this line, remove the leading # to uncomment and change HDMI-A-1 to your display output name, optionally adjust the resolution
