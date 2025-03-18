@@ -105,12 +105,17 @@ then save and quit hit `esc` then type `:wq`
 If all went well, you should see the message "set up completed" and no error codes.
 
 
-### configure firefox
+### Finishing touch: CRON
 
-Reboot the system, if you do not get straight to a firfox page, reboot again. Press `windows button` + `q` this will close the kiosk window. There should be another firefox window behind it. In Firefox set a custom URL for Homepage and new windows to the desired web app. Navigate to the URL and make sure that you log in so that the credentials are saved and cookies keeps the session open between restarts. 
+A cron task to run the `start-kiosk.sh` script every day at 7 am (or other suitable time) should be set up to relogin to the app (which seems to auto log out overnight). To do so run
+```
+crontab -e 
+```
+and in the file that opens add at the very end add:
+```
+0 7 * * * /home/kiosk-user/autologin/start-kiosk.sh >> /home/kiosk-user/cron.log
 
-Reboot once more, this time this should go straight to the firefox kiosk and to the web app of choice.
-
+```
 
 ## Set up summary and further notes
 
@@ -167,18 +172,6 @@ Edit `~/kiosk-user/.config/sway/config` using vim or another text editor like na
 input * events disabled
 ```
 Reboot the PC and you can then use a keyboard and mouse. Check the sway keyboard shortcut above as you will need those to open up a terminal in sway. Alternatively, open a TTY by pressing `ctrl`+`alt`+`f2` or `ctrl`+`alt`+`f3`, login and work from the TTY (but you won't be able to launch firefox or other GUI applications from there)
-
-## Finishing touch: CRON
-
-A cron task to run the `start-kiosk.sh` script every day at 7 am (or other suitable time) should be set up to relogin to the app (which seems to auto log out overnight). To do so run
-```
-crontab -e 
-```
-and in the file that opens add at the very end add:
-```
-0 7 * * * /home/kiosk-user/autologin/start-kiosk.sh >> /home/kiosk-user/cron.log
-
-```
 
 ## TODO
 - Document cron task and what to do in case of logout/error
